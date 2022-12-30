@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import NotConnected from "../auth/NotConnected";
+import ToDo from "../ToDo";
 
 const Board: FC = () => {
   const { data: session } = useSession();
@@ -9,7 +10,7 @@ const Board: FC = () => {
   }
   return (
     <>
-      <p>Board</p>
+      <ToDo />
     </>
   );
 };
